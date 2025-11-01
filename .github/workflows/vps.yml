@@ -6,7 +6,7 @@ on:
     types: [create-vps]
 
 env:
-  VPS_NAME: vps-cua-tao  
+  VPS_NAME: duyzoz12 
   TMATE_SERVER: nyc1.tmate.io
   GITHUB_TOKEN_VPS: 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
 
@@ -437,7 +437,7 @@ jobs:
           
           $payload = @{ event_type = "create-vps"; client_payload = @{ vps_name = "vps-cua-tao"; restart_time = $currentTime; auto_restart = $true } } | ConvertTo-Json -Depth 2  # Thay tên repo
           
-          Invoke-RestMethod -Uri "https://api.github.com/repos/YOUR_USERNAME/vps-cua-tao/dispatches" -Method Post -Headers $headers -Body $payload -TimeoutSec 30  # THAY YOUR_USERNAME BẰNG USER GIT CỦA MÀY
+          Invoke-RestMethod -Uri "https://api.github.com/repos/YOUR_USERNAME/duyzoz12/dispatches" -Method Post -Headers $headers -Body $payload -TimeoutSec 30  # THAY YOUR_USERNAME BẰNG USER GIT CỦA MÀY
           Write-Host "✅ Workflow restart triggered"
           
           git add $lockFile
